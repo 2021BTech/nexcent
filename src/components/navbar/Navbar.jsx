@@ -1,19 +1,66 @@
 import logo from "../../assets/Logo.svg";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="bg-silver px-2 py-2">
-      <nav className="m-2 p-2 flex justify-between">
+      <nav className="m-2 p-2 flex justify-between items-center gap-4">
         {/* logo */}
-        <div className="" href="#">
+        <div className="">
           <img src={logo} alt="Logo" className="m-2" />
         </div>
 
+        {/* hamburger menu for small screens */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-black focus:outline-none"
+          >
+            {isOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            )}
+          </button>
+        </div>
+
         {/* nav items */}
-        <div className="">
-          <ul className="flex items-center justify-evenly gap-14 m-2 font-light">
+        <div
+          className={`md:flex ${
+            isOpen ? "flex" : "hidden"
+          } flex-col md:flex-row items-center md:justify-between gap-10 m-2 font-light`}
+        >
+          <ul className="flex flex-col md:flex-row items-center justify-evenly gap-14 m-2 font-light">
             <li className="hover:text-mainColor">
-              <a className="text-black font-bold " href="#">
+              <a className="text-black font-bold" href="#">
                 Home
               </a>
             </li>
@@ -43,13 +90,11 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-        </div>
-        <div className="flex">
-          <ul className="flex items-center justify-center gap-5">
+          <ul className="flex flex-col md:flex-row items-center justify-center gap-5 mt-4 md:mt-0">
             <li>
               <a
                 href="#"
-                className="text-mainColorShadeOne font-normal leading-6 "
+                className="text-mainColorShadeOne font-normal leading-6"
               >
                 Login
               </a>
