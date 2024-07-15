@@ -32,7 +32,7 @@ const AboutSection = () => {
 
       <div className="bg-silver">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 md:gap-16 p-4 md:p-8">
-          <div className="m-4 p-4">
+          <div className="md:mx-32 p-4">
             <h1 className="text-[32px] text-darkGrey font-bold leading-10 py-2">
               Helping a local
               <br />
