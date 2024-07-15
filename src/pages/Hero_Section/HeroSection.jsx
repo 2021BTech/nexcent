@@ -2,7 +2,7 @@ import hero from "../../assets/heroImage.svg";
 
 const HeroSection = () => {
   return (
-    <div className="bg-silver">
+    <section className="bg-silver">
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 p-4 md:p-8">
         <div className="text-center md:text-left m-4 p-4">
           <p className="text-4xl md:text-[60px] font-bold text-darkGrey py-2">
@@ -19,7 +19,7 @@ const HeroSection = () => {
           </button>
         </div>
         <div className="m-4 p-4">
-          <img src={hero} alt="hero" className="max-w-full h-auto" />
+          <img src={hero} alt="hero" className="w-full h-auto" />
         </div>
       </div>
       <div className="flex justify-center items-center m-4 p-4 gap-2">
@@ -27,7 +27,7 @@ const HeroSection = () => {
         <span className="bg-mainColorTintThree rounded-full p-1 px-1 border-1"></span>
         <span className="bg-mainColorTintFour rounded-full p-1 px-1 border-1"></span>
       </div>
-    </div>
+    </section>
   );
 };
 

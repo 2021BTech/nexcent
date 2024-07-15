@@ -11,7 +11,7 @@ import group from "../../assets/group.svg";
 
 const ClientSection = () => {
   return (
-    <div className="bg-white">
+    <section className="bg-white">
       <div className="flex items-center justify-center">
         <span className="bg-red-400 border-1 w-8 p-0.5 m-1"></span>
       </div>
@@ -127,7 +127,7 @@ const ClientSection = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

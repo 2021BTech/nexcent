@@ -1,5 +1,3 @@
-// import { Router, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/navbar/Navbar";
 import AboutSection from "./pages/About_Section/AboutSection";
 import ClientSection from "./pages/Client_Section/ClientSection";
