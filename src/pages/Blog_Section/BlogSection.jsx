@@ -4,7 +4,7 @@ import blog3 from "../../assets/blog3.svg";
 
 const BlogSection = () => {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-white py-8 m-8">
       <div className="container mx-auto">
         <h1 className="text-[32px] text-center text-darkGrey font-bold mb-8">
           Caring is the new marketing
