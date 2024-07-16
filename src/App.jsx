@@ -8,9 +8,9 @@ import HeroSection from "./pages/Hero_Section/HeroSection";
 
 function App() {
   return (
-    <div className="">
+    <div className="w-full h-screen">
       <Navbar />
-      <div>
+      <div className="w-full h-screen">
         <HeroSection />
         <ClientSection />
         <AboutSection />

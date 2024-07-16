@@ -17,7 +17,7 @@ const BlogSection = () => {
           </p>
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
           {/* Blog 1 */}
           <div className="relative">
             <img
